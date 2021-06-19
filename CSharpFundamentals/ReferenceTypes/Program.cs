@@ -22,14 +22,11 @@ namespace ReferenceTypes
     {
         static void Main(string[] args)
         {
-            Demo1();
-            //Demo2();
-            //Demo3();
-            //Demo4();
-            //Demo5();
+            InitializeAndModify();
+            CopyAndModify();
         }
 
-        private static void Demo1()
+        private static void InitializeAndModify()
         {
             Person person1 = new Person
             {
@@ -59,7 +56,7 @@ namespace ReferenceTypes
             person2.Print();
         }
 
-        private static void Demo2()
+        private static void CopyAndModify()
         {
             Person person1 = new Person
             {
@@ -82,94 +79,6 @@ namespace ReferenceTypes
             person1.Print();
             Console.WriteLine("Person2 after Updated:");
             person2.Print();
-        }
-
-        private static void Demo3()
-        {
-            Person person = new Person
-            {
-                FirstName = "Teo",
-                LastName = "Nguyen",
-                DayOfBirth = new DateTime(1989, 1, 1)
-            };
-
-            Console.WriteLine("Person berefore Updating:");
-            person.Print();
-
-            UpdatePerson(person);
-
-            Console.WriteLine("Person after Updated:");
-            person.Print();
-        }
-
-        private static void UpdatePerson(Person person)
-        {
-            Console.WriteLine("Person insisde Update Function:");
-            person.Print();
-
-            person.FirstName = "Teo ABC";
-        }
-
-        private static void Demo4()
-        {
-            Person person = new Person
-            {
-                FirstName = "Teo",
-                LastName = "Nguyen",
-                DayOfBirth = new DateTime(1989, 1, 1)
-            };
-
-            Console.WriteLine("Person berefore Updating:");
-            person.Print();
-
-            UpdatePerson2(person);
-
-            Console.WriteLine("Person after Updated:");
-            person.Print();
-        }
-
-        private static void UpdatePerson2(Person person)
-        {
-            Console.WriteLine("Person insisde Update Function:");
-            person.Print();
-
-            person = new Person
-            {
-                FirstName = "Teo ABC",
-                LastName = "Nguyen",
-                DayOfBirth = new DateTime(1989, 1, 1)
-            };
-        }
-
-        private static void Demo5()
-        {
-            Person person = new Person
-            {
-                FirstName = "Teo",
-                LastName = "Nguyen",
-                DayOfBirth = new DateTime(1989, 1, 1)
-            };
-
-            Console.WriteLine("Person berefore Updating:");
-            person.Print();
-
-            UpdatePerson3(ref person);
-
-            Console.WriteLine("Person after Updated:");
-            person.Print();
-        }
-
-        private static void UpdatePerson3(ref Person person)
-        {
-            Console.WriteLine("Person insisde Update Function:");
-            person.Print();
-
-            person = new Person
-            {
-                FirstName = "Teo ABC",
-                LastName = "Nguyen",
-                DayOfBirth = new DateTime(1989, 1, 1)
-            };
         }
     }
 }

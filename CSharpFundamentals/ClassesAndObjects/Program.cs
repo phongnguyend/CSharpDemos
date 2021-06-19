@@ -74,10 +74,12 @@ namespace ClassesAndObjects
             Console.WriteLine("Company1:");
             Console.WriteLine(nashtech.Name);
             Console.WriteLine(nashtech.Website);
+            nashtech.Print();
 
             Console.WriteLine("Company2:");
             Console.WriteLine(sony.Name);
             Console.WriteLine(sony.Website);
+            sony.Print();
         }
     }
 }

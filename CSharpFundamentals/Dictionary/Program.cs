@@ -97,6 +97,7 @@ namespace Dictionary
             Console.WriteLine(dictionary[3]);
             Console.WriteLine(dictionary[4]);
             Console.WriteLine(dictionary[5]);
+            Console.WriteLine(dictionary.ContainsKey(5) ? dictionary[5] : "NotFound");
 
             foreach (var keyValue in dictionary)
             {
@@ -130,7 +131,7 @@ namespace Dictionary
             List<Person> people = new List<Person>
             {
                 new Person {Id = "000001", FirstName = "Ti" },
-                new Person {Id = "000001", FirstName = "Teo" },
+                new Person {Id = "000005", FirstName = "Teo" },
             };
 
             foreach (var person in people)
